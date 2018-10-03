@@ -1,0 +1,14 @@
+# Custom Variables
+
+## Return Client ID
+
+function(){
+	var clientId;
+  
+  	ga(function(tracker) {
+      clientId = tracker.get('clientId');
+    });
+
+	return clientId;
+  
+}
