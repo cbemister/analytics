@@ -1,0 +1,24 @@
+
+https://www.distilled.net/resources/a-comprehensive-guide-to-tracking-offline-interactions-in-google-analytics/
+
+Parameter
+Required?
+
+Explanation	Example
+v	Required	Protocol Version	v=1
+tid	Required	Tracking ID	tid=UA-123456-1
+cid	Required (or use UserID instead)	Client ID	cid=213725098.1449428391
+t	Required	Hit Type - typically pageview, event or transaction.	t=event
+dl	Required for “pageview” hit type	Document Location - if your hit is a pageview, this is where you set the URL for that page. Must be encoded as a URL (see example).	dl=http%3A%2F%2Fexample.com
+ec	Required for “event” hit type	Event Category - if your hit is an event, this is where you set the category, just like you would with a regular Google Analytics event.	ec=MyEventCategory
+ea	Required for “event” hit type	Event Action - if your hit is an event, this is where you set the action, just like you would with a regular Google Analytics event.	ea=MyEventAction
+sc	Optional	Session Control - set to “start” if you’re worried about continuing a user’s previous session within your session timeout window (default of 30 minutes). Set to “end” if you’re worried about a user continuing the session you’ve started within your session timeout window (recommended).	sc=end
+aip	Optional	Anonymize IP - set this to 1 if the IP (i.e. office) from which you’re sending requests is filtered out of your reporting view (recommended).	aip=1
+sr	Optional	Screen Resolution - necessary if you’re filtering out screen resolution (not set) traffic to reduce Measurement Protocol spam.	sr=1024x768
+dh	Optional	Document Host Name - necessary if you have a hostname filter to reduce Measurement Protocol spam. Not necessary if you’re using dr (below).	dh=example.com
+dr	Optional	Document Referrer - useful if you want to manually set the full source of your hit (as opposed to just hostname). Without this, Measurement Protocol hits are “direct”, meaning that they’ll inherit the source of the user’s previous session (which is often what you want). Must be URL encoded (see example).	dr=http%3A%2F%2Fexample.com
+cd<dimensionIndex>	Optional	Custom Dimension - this requires a little bit of interface setup, but it’s useful for debugging to have a hit-level custom dimension to flag up which hits are sent by Measurement Protocol.	cd1=MeasurementProtocol
+ni	Optional	Non-Interaction flag - useful for ensuring that Measurement Protocol events do not inflate your session count, or affect engagement metrics. This is only applicable to "event" hits.	ni=1
+
+http://www.google-analytics.com/collect?v=1&t=event&tid=UA-47113971-1&cid=[InsertClientIdHere]&ec=Lead&sr=MeasurementProtocol&ea=Qualified&uip=1.2.3.4&dh=distilled.net&sc=start&cd1=MeasurementProtocol
+
