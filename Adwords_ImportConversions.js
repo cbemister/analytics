@@ -2,6 +2,7 @@
 
 https://support.google.com/google-ads/answer/7014069#prepare_data
 
+https://support.google.com/google-ads/answer/7014069?co=ADWORDS.IsAWNCustomer%3Dfalse&hl=en
 
 yyyy-MM-dd HH:mm:ss+z	"2012-08-14 13:00:00+0500"
 
@@ -71,9 +72,20 @@ function adwordsTimestamp (time, zone) {
 
 adwordsTimestamp(timeStamp, zoneId);
 
+https://script.google.com/macros/s/AKfycbyOdxOfHQFvm1O2JFegGHKnpyXsvMqeLm03RpI2gAAormqsK78/exec?Google%20Click%20ID=EAIaIQobChMI7YPom5H83QIVl_5kCh3ZIgwbEAAYASAAEgKEFvD_BwE&Conversion%20Name=Offline%20Conversion&Conversion%20Time=2018-10-10%2016%3A54%3A45-0600
+
+https://script.google.com/macros/s/AKfycbyOdxOfHQFvm1O2JFegGHKnpyXsvMqeLm03RpI2gAAormqsK78/exec?Google%20Click%20ID=EAIaIQobChMI7YPom5H83QIVl_5kCh3ZIgwbEAAYASAAEgKEFvD_BwE&Conversion%20Name=Offline Conversion&Conversion Time=2018-10-10 16:54:45-0600
+
+%20 space
+
+%3A colon
 
 
-2018-10-10 16:54:45 -0600
+
+https://script.google.com/macros/s/AKfycbyOdxOfHQFvm1O2JFegGHKnpyXsvMqeLm03RpI2gAAormqsK78/exec?Google%20Click%20ID={{GCLID}}&Conversion%20Name={{Offline Conversion}}&Conversion%20Time={{conversionTime}}
+
+
+2018-10-10 16:54:45-0600
 
 
 
