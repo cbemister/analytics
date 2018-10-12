@@ -12,6 +12,11 @@ console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)
 
 yyyy-MM-ddTHH:mm:ss zzzz	"2012-08-14T13:00:00 America/Los_Angeles"
 
+var uri = "my test.asp?name=ståle&car=saab";
+var enc = encodeURI(uri);
+var dec = decodeURI(enc);
+var res = enc + "<br>" + dec;
+
 
 //VERSION 1.0 
 

@@ -20,6 +20,8 @@ https://tradesii.com/modal/valuation-report-responsive?key=666c2bf4-d176-4a1a-8e
 https://ga-dev-tools.appspot.com/hit-builder/
 
 
+Page Hostname tradesii.com
+
 trigger 
 
 // Check if tradesii modal exists
@@ -112,8 +114,31 @@ https://www.google-analytics.com/collect?v=1
 
 &aip=1
 
+https://www.simoahava.com/analytics/two-ways-to-persist-data-via-google-tag-manager/
 
-https://www.google-analytics.com/collect?v=1&tid=UA-544228-1&cid=2144132934.1530715050&t=event&ec=MeasurementProtocal&ea=Test_Lead&el=XTN_Test&cs=source&cm=medium
+// Save data to the current local store
+localStorage.setItem("gclid", {{gclid}});
+
+localStorage.getItem("username")
+
+if (window['Storage']) {
+  // localStorage persists indefinitely
+  localStorage.setItem('session', 'true'); 
+  // sessionStorage persists until the browser is closed
+  sessionStorage.setItem('session', 'true');
+} else {
+  // Fallback for when the browser doesn't support Web Storage API
+  {{JS - setCookie}}('session', 'true');
+}
+
+
+if (window['Storage']) {
+  var localSession = localStorage.getItem('session');
+  var sessionSession = sessionStorage.getItem('session');
+}
+
+
+https://www.google-analytics.com/collect?v=1&tid=UA-544228-1&cid={{CID}}&t=event&ec=Tradesii%20Lead&ea={{Page URL}}&el=XTN_Test&cs=source&cm=medium
 
 
 
@@ -126,4 +151,102 @@ https://www.google-analytics.com/collect?v=1&tid=UA-544228-40&cid=CLIENT_ID_NUMB
 
 https://www.google-analytics.com/collect?v=1&tid=UA-544228-40&cid=CLIENT_ID_NUMBER&t=event&ec=LiveChat&ea=Lead&el=DIX_Sales&cs=source&cm=medium
 
+dl - document location
 
+Circumvent any hostname filtering
+
+ 
+
+uip - user IP
+
+Preserve location
+
+ 
+
+ua - User agent
+
+Preserve info on user agent (optional)
+
+ 
+
+ds - Data source
+
+Segment on data source. (cdN as option)
+
+
+http://clicteq.com/ultimate-guide-adwords-conversion-tracking/
+
+
+//All Pages - Set GCLID Cookie
+
+<script type=”text/javascript”>
+
+function setCookie(name, value, days){
+
+var date = new Date();
+
+date.setTime(date.getTime() + (days*24*60*60*1000));
+
+var expires = “; expires=” + date.toGMTString();
+
+document.cookie = name + “=” + value + expires;
+
+}
+
+function getParam(p){
+
+var match = RegExp(‘[?&]’ + p + ‘=([^&]*)’).exec(window.location.search);
+
+return match && decodeURIComponent(match[1].replace(/\+/g, ‘ ‘));
+
+}
+
+var gclid = getParam(‘gclid’);
+
+if(gclid){
+
+var gclsrc = getParam(‘gclsrc’);
+
+if(!gclsrc || gclsrc.indexOf(‘aw’) !== -1){
+
+setCookie(‘gclid’, gclid, 90);
+
+}
+
+}
+
+</script>
+
+//Lead Form
+
+<script>
+
+function readCookie(name) {
+
+var n = name + “=”;
+
+var cookie = document.cookie.split(‘;’);
+
+for(var i=0;i < cookie.length;i++) {
+
+var c = cookie[i];
+
+while (c.charAt(0)==’ ‘){c = c.substring(1,c.length);}
+
+if (c.indexOf(n) == 0){return c.substring(n.length,c.length);}
+
+}
+
+return null;
+
+}
+
+window.onload = function() {
+
+document.getElementById(‘gclid_field’).value =
+
+readCookie(‘gclid’);
+
+}
+
+</script>

@@ -1,3 +1,27 @@
+
+
+Beginning January 2018, on_sent_ok has been deprecated in Contact Form 7 (version 5.0). If you have been using on_sent_ok in your Contact Form 7 forms, your forms may no longer work as expected.
+
+
+
+To replace it with an alternative code using DOM events, first, find the file named “functions.php” in the directory of your active theme. Second, add the following code at the bottom of the functions.php file:
+
+
+add_action( 'wp_footer', 'mycustom_wp_footer' );
+ 
+function mycustom_wp_footer() {
+?>
+<script type="text/javascript">
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    ga( 'send', 'event', 'Contact Form', 'submit' );
+}, false );
+</script>
+<?php
+}
+
+Third, remove the “on_sent_ok” line from the Additional Settings tab and save the contact form.
+
+
 // Form Field HTML
 
 <label>Copy from <strong>source=</strong> in LiveChat Window (required) 
