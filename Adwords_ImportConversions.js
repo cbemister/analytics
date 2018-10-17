@@ -4,7 +4,16 @@ https://support.google.com/google-ads/answer/7014069#prepare_data
 
 https://support.google.com/google-ads/answer/7014069?co=ADWORDS.IsAWNCustomer%3Dfalse&hl=en
 
+https://zackphilipps.com/store-gclid-cookie-send-to-hubspot/
+
+https://www.simoahava.com/gtm-tips/10-useful-custom-javascript-tricks/
+
+https://www.analyticsmania.com/post/cookies-with-google-tag-manager/
+
 yyyy-MM-dd HH:mm:ss+z	"2012-08-14 13:00:00+0500"
+
+
+("str1,str2,str3,str4".match(/,/g) || []).length
 
 
 console.log(Intl.DateTimeFormat().resolvedOptions().timeZone)
@@ -40,6 +49,10 @@ function adwordsTimestamp (time) {
 
 //VERSION 2.0
 
+
+
+
+// Pass as global variable to snapengage dashboard
 var now = new Date();
 var t = Date.parse(now);
 var z = now.getTimezoneOffset();
@@ -89,6 +102,22 @@ https://script.google.com/macros/s/AKfycbyOdxOfHQFvm1O2JFegGHKnpyXsvMqeLm03RpI2g
 
 https://script.google.com/macros/s/AKfycbyOdxOfHQFvm1O2JFegGHKnpyXsvMqeLm03RpI2gAAormqsK78/exec?Google%20Click%20ID={{GCLID}}&Conversion%20Name={{Offline Conversion}}&Conversion%20Time={{conversionTime}}
 
+
+CID | PATH | GCLID | TIME
+
+776166296.1539792437|/|EAIaIQobChMInJOng9qB3gIVGCR_Ch0MAQaeEAEYASAAEgLETvD_BwE|1539792923000-360
+
+Google Analytics Client Id
+776166296.1539792437
+
+Page Url (Path) 
+/
+
+Google click ID (GCLID)
+EAIaIQobChMInJOng9qB3gIVGCR_Ch0MAQaeEAEYASAAEgLETvD_BwE
+
+Conversion Time
+1539793783000-360
 
 2018-10-10 16:54:45-0600
 

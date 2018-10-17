@@ -17,6 +17,8 @@ $('a.tradesii-widget__button.tradesii-modal__button').attr('href', tradesiiHref 
 
 https://tradesii.com/modal/valuation-report-responsive?key=666c2bf4-d176-4a1a-8eea-676959b11599&widget_style=green&language=en_CA&external_id=dbb64bf1-89fd-4f4d-8c15-6649785340e02&color=blue
 
+https://tradesii.com/modal/valuation-report-responsive?key=666c2bf4-d176-4a1a-8eea-676959b11599&widget_style=green&language=en_CA&external_id=dbb64bf1-89fd-4f4d-8c15-664978534e02&CID=2042042672.1530646719
+
 https://ga-dev-tools.appspot.com/hit-builder/
 
 
@@ -145,8 +147,16 @@ https://www.google-analytics.com/collect?v=1&tid=UA-544228-1&cid={{CID}}&t=event
 https://www.google-analytics.com/collect?v=1&tid=UA-544228--1&cid=2144132934.1530715050&t=pageview&dl=https%3A%2F%2Fwww.crosstownautocentre.com%2Fcontact-form-confirm.htm&aip=1&gclid=EAIaIQobChMI7YPom5H83QIVl_5kCh3ZIgwbEAAYASAAEgKEFvD_BwE
 
 
-https://www.google-analytics.com/collect?v=1&tid=UA-544228-40&cid=CLIENT_ID_NUMBER&t=event&ec=LiveChat&ea=Lead&el=DIX_Sales&cs=source&cm=medium
+var uri = {{Page Path}};
+var enc = encodeURI(uri);
+var dec = decodeURI(enc);
+var res = enc + "<br>" + dec;
 
+https://www.google-analytics.com/collect?v=1&tid=UA-544228-40&cid={{CID}}&t=event&ec=Tradesii&ea=Lead&el= enc
+
+
+var img = new Image(1,1); // width, height values are optional params 
+img.src = 'http://www.testtrackinglink.com';
 
 
 https://www.google-analytics.com/collect?v=1&tid=UA-544228-40&cid=CLIENT_ID_NUMBER&t=event&ec=LiveChat&ea=Lead&el=DIX_Sales&cs=source&cm=medium
