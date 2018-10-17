@@ -30,10 +30,6 @@ function ac_chat_tracking() {
 					var gclid = chatTrackingArray[2];
 					var time = chatTrackingArray[3];
 
-					//Split Time From Time Zone
-					var timeStamp = parseInt(time.split('-')[0]);
-					var zoneId = parseInt(time.split('-')[1]);
-
 					// Encode URI
 					var pathENC = encodeURI(path);
 
@@ -41,12 +37,16 @@ function ac_chat_tracking() {
 					var dealershipGA = new Image(1, 1);
 					dealershipGA.src = 'https://www.google-analytics.com/collect?v=1&tid=' + uaid +'&cid=' + cid + '&t=event&ec=LiveChat&ea=' + dept + '%20Lead&el=' + pathENC;
 					document.body.appendChild(dealershipGA);
-
-					// Get Conversion Time In Correct Format
-					var conversionTime = adwordsTimestamp(timeStamp, zoneId);
 					
 					//Check if GCLID Exists
 					if (gclid) {
+
+                        //Split Time From Time Zone
+                        var timeStamp = parseInt(time.split('-')[0]);
+                        var zoneId = parseInt(time.split('-')[1]);
+                            
+                        // Get Conversion Time In Correct Format
+                        var conversionTime = adwordsTimestamp(timeStamp, zoneId);
 
 						// Push To Google Sheet
 						var googleAdwords = new Image(1,1);
